@@ -7,7 +7,7 @@ class PigLatinizer
   end
 
   def convert
-    if @text.match(/^[aeiou]/)
+    if text.match(/^[aeiou]/)
       text << "w"
     elsif text.scan(/^[qwrtypsdfghjklzxcvbnm]*/i).count == 3
       text = text.slice(3..-1) + text.slice(0,3)
