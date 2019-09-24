@@ -16,7 +16,7 @@ class PigLatinizer
         text.push(text[i])
         i += 1
       end
-      
+
       text.shift
       text.shift
       text << "ay"
