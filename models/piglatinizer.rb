@@ -1,6 +1,6 @@
 class PigLatinizer
 
-  def self.piglatinize(text)
+  def piglatinize(text)
     if text.match(/^[aeiouAEIUO]/)
       text << "w"
     elsif text.scan(/^[qwrtypsdfghjklzxcvbnm]*/i).count == 3
