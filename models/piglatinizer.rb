@@ -8,11 +8,15 @@ class PigLatinizer
 
   def convert
     if @text.match(/^[aeiou]/)
-      text << "way"
+      text << "w"
     elsif @text.scan(/^[qwrtypsdfghjklzxcvbnm]*/i).count == 3
       text = @text.slice(3..-1) + @text.slice(0,3)
-      text.gsub(/^[qwrtypsdfghjklzxcvbnm]*/i, '') << "ay"
+    elsif @text.scan(/^[qwrtypsdfghjklzxcvbnm]*/i).count == 2
+      text = @text.slice(2..-1) + @text.slice(0,2)
+    elsif @text.scan(/^[qwrtypsdfghjklzxcvbnm]*/i).count == 1
+      text = @text.slice(1..-1) + @text.slice(0)
     end
+    text << "ay"
   end
 
 end
