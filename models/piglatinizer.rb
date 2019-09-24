@@ -11,11 +11,7 @@ class PigLatinizer
       text << "way"
     else
       push = @text.scan(/^[qwrtypsdfghjklzxcvbnm]*/i).count
-      i = 0
-      push.times do
-        text << text[i]
-        i += 1
-      end
+      text = text.slice(push..-1) + text.slice(0,push)
       text.gsub(/^[qwrtypsdfghjklzxcvbnm]*/i, '') << "ay"
     end
   end
