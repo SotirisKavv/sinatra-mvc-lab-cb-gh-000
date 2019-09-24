@@ -16,7 +16,7 @@ class PigLatinizer
         text << text[i]
         i += 1
       end
-      text = [push..-1]
+      text = text[push..-1]
       text << "ay"
     end
   end
