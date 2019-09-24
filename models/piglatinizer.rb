@@ -12,7 +12,7 @@ class PigLatinizer
     else
       push = @text.scan(/^[qwrtypsdfghjklzxcvbnm]*/i).count
       text = @text.slice(push..-1) + @text.slice(0,push)
-      text.gsub(/^[qwrtypsdfghjklzxcvbnm]*/i, '') << "ay"
+      @text.gsub(/^[qwrtypsdfghjklzxcvbnm]*/i, '') << "ay"
     end
   end
 
