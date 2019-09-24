@@ -16,8 +16,7 @@ class PigLatinizer
         text << text[i]
         i += 1
       end
-      text = text[push..-1]
-      text << "ay"
+      text.gsub(/^[qwrtypsdfghjklzxcvbnm]*/i, '') << "ay"
     end
   end
 
