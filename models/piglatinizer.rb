@@ -1,11 +1,5 @@
 class PigLatinizer
 
-  attr_reader :text
-
-  def initialize
-    @text = text
-  end
-
   def convert(text)
     if text.match(/^[aeiou]/)
       text << "w"
