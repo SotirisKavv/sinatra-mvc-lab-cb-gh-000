@@ -13,7 +13,7 @@ class PigLatinizer
       push = @text.scan(/^[qwrtypsdfghjklzxcvbnm]*/i).count
       i = 0
       push.times do
-        text.push(text[i])
+        text << text[i]
         i += 1
       end
       push.times do
