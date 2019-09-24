@@ -18,8 +18,8 @@ class PigLatinizer
       text.shift
       text << "ay"
     else
-      text << "way"      
+      text << "way"
     end
   end
-  
+
 end
