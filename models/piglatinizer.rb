@@ -9,9 +9,14 @@ class PigLatinizer
   def convert
     if @text.match(/^[aeiou]/)
       text << "way"
-    elsif @text.match(/^[qwrtypsdfghjklzxcvbnm]{2}/)
-      text.push(text[0])
-      text.push(text[1])
+    else
+      push = @text.scan(/^[qwrtypsdfghjklzxcvbnm]*/i).count
+      i = 0
+      push.times do
+        text.push(text[i])
+        i += 1
+      end
+      
       text.shift
       text.shift
       text << "ay"
