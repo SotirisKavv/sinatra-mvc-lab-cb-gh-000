@@ -16,12 +16,10 @@ class PigLatinizer
         text.push(text[i])
         i += 1
       end
-
-      text.shift
-      text.shift
+      push.times do
+        text.shift
+      end
       text << "ay"
-    else
-      text << "way"
     end
   end
 
